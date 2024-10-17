@@ -5,9 +5,6 @@ FROM php:8.2-apache
 # Install additional PHP extensions required by MySQL
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Copy the files in the "src" directory into the container's html directory
-COPY /src/ /var/www/html/
-
 # Set permissions for the web server
 RUN chown -R www-data:www-data /var/www/html
 
