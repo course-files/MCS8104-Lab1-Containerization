@@ -1,1 +1,1 @@
-# MCS8104-Lab1-Containerization
+# Lab 1: Containerization
