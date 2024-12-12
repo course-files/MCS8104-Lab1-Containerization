@@ -24,8 +24,8 @@ services:
 
   mysql:
     image: customized-mysql:1.0
-    hostname: mysql-8.3.0-mcs8104-lab1
-    container_name: mysql-8.3.0-mcs8104-lab1
+    hostname: mysql-9.1.0-mcs8104-lab1
+    container_name: mysql-9.1.0-mcs8104-lab1
     restart: always
     ports:
       - 3307:3306
@@ -45,7 +45,7 @@ services:
       "
 
   mariadb:
-    image: mariadb:11.5.2
+    image: mariadb:11.6.2-noble
     hostname: mariadb-11.5.2-mcs8104-lab1
     container_name: mariadb-11.5.2-mcs8104-lab1
     restart: always
@@ -65,9 +65,9 @@ services:
       "
 
   postgres:
-    image: postgres:16.2
-    hostname: postgres-16.2-mcs8104-lab1
-    container_name: postgres-16.2-mcs8104-lab1
+    image: postgres:17.2
+    hostname: postgres-17.2-mcs8104-lab1
+    container_name: postgres-17.2-mcs8104-lab1
     restart: always
     shm_size: 1g
     ports:
