@@ -1,5 +1,5 @@
 # Specify the base image
-# php:<version>-apache containts Debian's Apache httpd web server plus PHP
+# php:<version>-apache contains Apache httpd web server installed in Debian plus PHP
 FROM php:8.2-apache
 
 # Install additional PHP extensions required by MySQL
