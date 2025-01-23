@@ -22,10 +22,10 @@ services:
       apache2-foreground
       "
 
-  mysql:
+  mysql-8.0.40-debian:
     image: customized-mysql:1.0
-    hostname: mysql-9.1.0-mcs8104-lab1
-    container_name: mysql-9.1.0-mcs8104-lab1
+    hostname: mysql-8.0.40-debian
+    container_name: mysql-8.0.40-debian
     restart: always
     ports:
       - 3307:3306
