@@ -34,10 +34,12 @@ services:
     volumes:
       # To store the server's configuration file in the host
       - mysql-config:/etc/mysql/
+      # To store the server's log files in the host
+      - mysql-log:/var/log/mysql/
       # To store the server's data persistently in the host
       - mysql-data:/var/lib/mysql
       # To run the SQL scripts used to create the required databases
-      - mysql-init:/docker-entrypoint-initdb.d/ # To run the SQL scripts used to create the required databases
+      - mysql-init:/docker-entrypoint-initdb.d/
     command: >
       /bin/bash -c "
       chmod 644 /etc/mysql/my.cnf &&
@@ -91,6 +93,12 @@ volumes:
       type: none # Binds to the path specified in "device" instead of creating a new directory/file on the host
       o: bind # Confirms that Docker maps a directory/file on the host directly into the container
       device: ./container-volumes/mysql/etc-mysql/
+  mysql-log:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/mysql/var-log-mysql
   mysql-data:
     driver: local
     driver_opts:
