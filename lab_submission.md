@@ -5,7 +5,7 @@
 Use the `customized-ubuntu:1.0` image to create a container named `dbserver-mysql-nairobi`. The command should map the container’s port 3306 to the host’s port 3309.
 
 ```dockerfile
-docker run --name dbserver-mysql-nairobi -d -p 3306:3309 customized-ubuntu:1.0
+docker run --name dbserver-mysql-nairobi -d -p 3306:3309 customized-ubuntu:1.0 
 ```
 
 ## 2. MySQL Server and MySQL Client Installation in Ubuntu
