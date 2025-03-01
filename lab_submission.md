@@ -18,5 +18,7 @@ docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=5trathmore -p 3309:3306 -d
 ## 3. Login using the MySQL Client and Change the MySQL Root Password
 
 ```sql
+ALTER USER 'root'@'localhost' IDENTIFIED BY '5trathmore';
+FLUSH PRIVILEGES;
 docker exec -it mysql-server mysql -uroot -p
 ```
